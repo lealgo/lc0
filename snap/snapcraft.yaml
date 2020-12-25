@@ -17,6 +17,8 @@ architectures:
 apps:
   lc0:
     command: bin/lc0
+  plugs:
+    - home
 
 parts:
   meson-project:
