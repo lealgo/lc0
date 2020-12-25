@@ -31,7 +31,8 @@ parts:
     - g++-8
     - libstdc++-8-dev
     - libopenblas-dev
-    - libeigen3-dev
+    stage-packages:
+    - libopenblas-base
     build-environment:
     - CC: "gcc-8"
     - CXX: "g++-8"
