@@ -17,8 +17,8 @@ architectures:
 apps:
   lc0:
     command: bin/lc0
-  plugs:
-    - home
+    plugs:
+      - home
 
 parts:
   meson-project:
@@ -35,9 +35,6 @@ parts:
     build-environment:
     - CC: "gcc-8"
     - CXX: "g++-8"
-    stage-packages:
-    - libopenblas-dev
-    - libeigen3-dev
     override-build: |
       pip3 install --upgrade meson==0.55.3
       snapcraftctl build
