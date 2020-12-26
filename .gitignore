@@ -13,4 +13,4 @@ src/.vs/
 subprojects/*
 testdata/
 xcuserdata
-snap/snapcraft.yaml
+snapcraft.yaml
