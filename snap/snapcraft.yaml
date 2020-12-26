@@ -40,7 +40,7 @@ parts:
       pip3 install --upgrade meson==0.55.3
       snapcraftctl build
     # source: https://github.com/LeelaChessZero/lc0.git
+    # source-type: git
+    # source-depth: 1
+    # source-tag: 'v0.26.3'
     source: .
-    source-type: git
-    source-depth: 1
-    source-tag: 'v0.26.3'
