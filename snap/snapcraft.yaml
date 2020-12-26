@@ -14,6 +14,7 @@ architectures:
     run-on: amd64
   # - build-on: i386
   #   run-on: i386
+
 apps:
   lc0:
     command: bin/lc0
@@ -24,23 +25,22 @@ parts:
   meson-project:
     plugin: meson
     meson-parameters:
-    - -Dbuildtype=release
-    - -Dgtest=False
+      - -Dbuildtype=release
+      - -Dgtest=False
     build-packages:
-    - gcc-8
-    - g++-8
-    - libstdc++-8-dev
-    - libopenblas-dev
+      - gcc-8
+      - g++-8
+      - libstdc++-8-dev
+      - libopenblas-dev
     stage-packages:
-    - libopenblas-base
+      - libopenblas-base
     build-environment:
-    - CC: "gcc-8"
-    - CXX: "g++-8"
+      - CC: "gcc-8"
+      - CXX: "g++-8"
     override-build: |
       pip3 install --upgrade meson==0.55.3
       snapcraftctl build
-    # source: https://github.com/LeelaChessZero/lc0.git
-    # source-type: git
-    # source-depth: 1
-    # source-tag: 'v0.26.3'
-    source: .
+    source: https://github.com/LeelaChessZero/lc0.git
+    source-type: git
+    source-depth: 1
+    source-tag: 'v0.26.3'
