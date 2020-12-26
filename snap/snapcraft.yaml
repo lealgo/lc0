@@ -12,8 +12,8 @@ confinement: strict # use 'strict' once you have the right plugs and slots
 architectures:
   - build-on: amd64
     run-on: amd64
-  - build-on: i386
-    run-on: i386
+  # - build-on: i386
+  #   run-on: i386
 apps:
   lc0:
     command: bin/lc0
@@ -39,7 +39,8 @@ parts:
     override-build: |
       pip3 install --upgrade meson==0.55.3
       snapcraftctl build
-    source: https://github.com/LeelaChessZero/lc0.git
+    # source: https://github.com/LeelaChessZero/lc0.git
+    source: .
     source-type: git
     source-depth: 1
     source-tag: 'v0.26.3'
